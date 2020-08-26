@@ -1,5 +1,5 @@
 body {
-  background: #233047;
+  background: #222;
 }
 
 .container {
@@ -8,4 +8,39 @@ body {
 
 h1 {
   font-size: 2.2rem;
+}
+
+.time-icon {
+  position: relative;
+  top: -50px;
+  border-radius: 50%;
+  width: 100px;
+  margin-bottom: -50px;
+}
+
+.time-img {
+  min-height: 368px;
+}
+
+.temperature {
+  display: inline-block;
+  min-width: 40px;
+  opacity: 0;
+}
+
+div[data-js]:not([data-js='weather-details']):not(.card) {
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fade 0.5s ease-in-out forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
